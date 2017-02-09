@@ -119,6 +119,7 @@ function add(){
     document.getElementById("AddPhone").value = '';
     document.getElementById("Addemail").value = '';
   }
+  init();
 }
 function edit(id){
   var name = document.getElementById("EditName").value;
