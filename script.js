@@ -37,6 +37,7 @@ function deleteitem(id){
       var conf = confirm("Do you really want to delete " + list[i].name + " from the contact list?");
       if (conf){
         list.splice(i, 1);
+        document.getElementById('edit').style.display = 'none';
         var parent = document.getElementById('content');
         var child = document.getElementById('id'+id);
         parent.removeChild(child);
@@ -178,6 +179,8 @@ function validateNewEntry(name, phone, email){
     var s = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     emailOK = s.test(email);
   }
+  if (!phoneOK && phone.length >=1){alert("invalid Phone number");return false;}
+  if (!emailOK && email.length >=1){alert("invalid Email");return false;}
   return(nameOK && (emailOK || phoneOK));
 }
 function search(){
