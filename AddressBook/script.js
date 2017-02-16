@@ -36,6 +36,7 @@ function deleteitem(id){
     if (list[i].id == id){
       var conf = confirm("Do you really want to delete " + list[i].name + " from the contact list?");
       if (conf){
+        document.getElementById("edit").style.display = "none";
         list.splice(i, 1);
         document.getElementById('edit').style.display = 'none';
         var parent = document.getElementById('content');
@@ -169,7 +170,7 @@ function validateNewEntry(name, phone, email){
     phoneOK = true;
     for (var i = 0; i < phone.length; i++){
       var c = phone.charAt(i);
-      if ((!/[0-9]/.test(c)) && (c != '-') && (c != '+')){
+      if ((!/[0-9]/.test(c)) && (c != '-') && (c != '+') && (c != '(') && (c != ')') && (c != ' ')){
         phoneOK = false
         break;
       }

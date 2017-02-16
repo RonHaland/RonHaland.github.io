@@ -1,114 +1,122 @@
-*{
-  font-family: helvetica, sans-serif;
-}
-body, html{
-  margin:0;
-  padding:0;
-  margin-top: 10px;
-}
-body{
-  display: flex;
-  flex-direction: column;
-  margin:auto;
-  width: 30em;
-  box-sizing: border-box;
-  border: 4px solid #777;
-}
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
 
-#tools, #settings, #content, #adder, #edit{
-  flex: 1 100%;
-  box-sizing: border-box;
-  padding:4px;
+@media screen and (max-width: 640px) {
+  body, html{
+    margin:0;
+    height:100%;
+  }
+  *{
+    color:#000;
+    font-size: 95%;
+    font-family: helvetica, sans-serif;
+    text-decoration: none;
+  }
+  header{
+    height:7em;
+    background-color: #654;
+  }
+  header img{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 2em;
+  }
+  header span{
+    font-size: 5em;
+    color: white;
+    line-height: 1em;
+    position: absolute;
+    left:0;
+    right:0;
+    text-align: center;
+    font-family: 'Pacifico', cursive, sans-serif;
+  }
+  main {
+    margin: auto;
+    width: 100%;
+    min-width: 250px;
+    background-color: #ccc;
+    height: 100%;
+  }
+  .projects{
+    background: #131313;
+    float:left;
+    background-color: #777;
+    width: 90px;
+    padding-bottom: 1em;
+    margin-bottom: 0.5em;
+    clear:left;
+  }
+  .projects h3{
+    text-align: center;
 
-  border-radius: 5px;
-}
-
-#tools{
-  height:2em;
-  order:1;
-}
-#adder, #settings, #edit{
-  border: 5px solid #DDD;
-  margin: 5px;
-  display: none;
-  order:2;
-}
-.addin, .editin{
-  width: 80%;
-  margin: 0;
-}
-.addin label, .editin label {
+  }
+  .projects a{
+    text-align: center;
+    width: 100%;
+    height:2em;
     float: left;
     clear: left;
-    width: 100px;
-}
-
-.addin input, .editin input {
-    display: block;
-    margin: 3px;
-}
-#adder span, #edit span{
-  float:right;
-  padding-right: 15px;
-  border:2px solid #DDD;
-  padding:2px;
-  border-radius: 2px;
-}
-#content{
-  border: 5px solid #DDD;
-  margin: 5px;
-  order: 3;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  display: flex;
-  flex-direction: column;
-}
-#content article{
-  box-sizing: border-box;
-  margin-bottom: 3px;
-  margin-top:3px;
-  padding: 5px;
-  border: 2px solid #777;
-  border-left: 5px solid #777;
-  border-radius: 3px;
-  background-color: #EEE;
-  flex:1;
-  order:1;
-  width: 100%;
-}
-#content article .info{
-  width: 80%;
-  float: left;
-}
-#content article .edit{
-  width: 1em;
-  float: right;
-  margin:auto;
-}
-#content article .edit span{
+    line-height: 2em;
+  }
+  .projects a:hover{
+    background-color: #999;
+    font-weight: bold;
+  }
 
 }
-h2, h3, h5{
-  margin-top: 1px;
-  margin-bottom: 1px;
-}
-#SortSearch{
-  width:60%;
-  float:left;
-}
-#SortSearch * {
-  margin-top: 0.2em
-}
-#AddDel{
-  float:right;
-  width:auto;
-}
-#AddDel .fa{
-  border:2px solid #DDD;
-  padding:5px;
-  border-radius: 2px;
-}
-.editEntry, .delEntry, #AddDel *, #sortIcon, .fa{
-  cursor: pointer;
-  cursor: hand;
+@media screen and (min-width: 640px) {
+  body, html{
+    margin:0;
+    height:100%;
+  }
+  *{
+    color:#000;
+    font-family: helvetica, sans-serif;
+    text-decoration: none;
+  }
+  header{
+    height:200px;
+    background-color: #654;
+  }
+  header span{
+    font-size: 5em;
+    color: white;
+    position: absolute;
+    left:0;
+    right:0;
+    text-align: center;
+    font-family: 'Pacifico', cursive, sans-serif;
+  }
+  main {
+    margin: auto;
+    width: 640px;
+    background-color: #ccc;
+    height: 100%;
+  }
+  .projects{
+    background: #131313;
+    float:left;
+    background-color: #777;
+    width: 150px;
+    padding-bottom: 1em;
+    margin-bottom: 0.5em;
+    clear: left;
+  }
+  .projects h3{
+    text-align: center;
+
+  }
+  .projects a{
+    text-align: center;
+    width: 100%;
+    height:2em;
+    float: left;
+    clear: left;
+    line-height: 2em;
+  }
+  .projects a:hover{
+    background-color: #999;
+    font-weight: bold;
+  }
 }

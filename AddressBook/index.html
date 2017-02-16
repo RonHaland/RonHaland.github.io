@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Address book</title>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/8d189dfc61.css">
+</head>
+<body>
+  <div id="tools">
+    <div id="SortSearch">
+      <form>
+        <input placeholder="Search" oninput="search();" id="searchBar"/>
+      </form>
+    </div>
+    <div id="AddDel">
+      <div onclick="openAdder();" class="fa fa-user-plus"></div>
+    </div>
+  </div>
+  <div id="adder">
+    <span onclick="openAdder();" class="fa fa-caret-up "></span>
+    <div class="addin">
+      <h2>Add Entry</h2>
+      <form method="post" name="addForm">
+        <label for="Name">Name: </label><input type="text" name="Name" id="AddName">
+        <label for="Phone">Phone: </label><input type="text" name="Phone" id="AddPhone">
+        <label for="email">email: </label><input type="text" name="email" id="Addemail">
+        <button type="button" onclick="add();">add</button>
+      </form>
+    </div>
+
+  </div>
+  <div id="edit">
+    <span onclick="closeEdit();" class="fa fa-caret-up "></span>
+    <div class="editin">
+      <h2 id="editHead">Edit Entry</h2>
+      <form method="post" name="editForm">
+        <label for="Name">Name: </label><input type="text" name="Name" id="EditName">
+        <label for="Phone">Phone: </label><input type="text" name="Phone" id="EditPhone">
+        <label for="email">email: </label><input type="text" name="email" id="Editemail">
+        <button type="button" onclick="edit();" id="editButton">edit</button>
+      </form>
+    </div>
+
+  </div>
+  <div id="settings">
+  </div>
+  <div id="content">
+  </div>
+</body>
+</html>
