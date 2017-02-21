@@ -64,6 +64,7 @@ function turnCard(card){
   }
 }
 function turnChange(){
+  setTimeout(function(){
   c1 = $("#x"+card1ind);
   c2 = $("#x"+card2ind);
   if (card1 === card2){
@@ -71,10 +72,10 @@ function turnChange(){
     c1.addClass('done');
 
     c2.addClass('done');
-    setTimeout(function(){
+
       c1.css("opacity","0.5");
       c2.css("opacity","0.5");
-    }, 1500);
+
     $("#p"+playerTurn).text("" + Score[playerTurn]);
   }
   else if (playerTurn === 1){playerTurn = 2; $("#name2").css("color","red");$("#name1").css("color","white");}
@@ -87,6 +88,7 @@ function turnChange(){
   card2 = -1;
   card1ind = -1;
   card2ind = -1;
+  }, 1500);
 }
 function flipAnimation(card, reverse){
   if (!reverse){
