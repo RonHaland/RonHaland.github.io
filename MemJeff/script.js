@@ -20,9 +20,7 @@ $(document).ready(function() {
     for (var i=0; i<x*x; i++){
       valueArray[i] = Math.floor(i/2);
     }
-    console.log(valueArray);
     valueArray = shuffleCards(valueArray);
-    console.log(valueArray);
     var card;
     var index=0;
     for(var row = 0; row < sizeRows; row++){
@@ -94,7 +92,6 @@ function flipAnimation(card, reverse){
   if (!reverse){
     var jeff = card.attr('class').split(' ');
     jeff  = jeff[jeff.length-1];
-    console.log(jeff);
     animationReady = 0;
     card.animate({width:0, marginLeft:40, marginRight:40}, 500, function(){
       card.css('background-image', 'url(images/Jeff' + jeff + '.jpg)');
