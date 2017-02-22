@@ -11,9 +11,6 @@ function Entry(name, tlf, email){
   this.email = email;
 }
 function init() {
-  drawEntries();
-}
-function drawEntries(){
   var content = document.getElementById("content");
   content.innerHTML = "";
   for(var i=0; i < list.length; i++){
@@ -124,7 +121,6 @@ function add(){
     document.getElementById("AddPhone").value = '';
     document.getElementById("Addemail").value = '';
   }
-  init();
 }
 function edit(id){
   var name = document.getElementById("EditName").value;
