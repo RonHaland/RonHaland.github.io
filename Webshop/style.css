@@ -17,7 +17,7 @@
   font-family: "Raleway", sans-serif;
 }
 html, body{
-  min-height:auto;
+  min-height: 100%; /* needed for footer */
   position: absolute;
   top:0;
   bottom:0;
@@ -236,9 +236,10 @@ thead td+td{
 /*FOOTER ELEMENTS*/
 footer{
   position: absolute;
-  bottom:0;
-  left:0;
-  right:0;
+  left: 0px;
+  bottom: 0px;
+  right:0px;
+  overflow: auto; /* trick needed because it only contains floating elements */
   height:8em;
   min-width:806px;
   background-color: #111;
