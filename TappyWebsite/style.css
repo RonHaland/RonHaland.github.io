@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html{
+  font-family: 'Roboto', sans-serif;
+}
+.banner{
+  height: auto;
+  padding: 1em;
+  background-color: #343a40;
+}
+.banner h1{
+  margin-bottom: .2em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3em;
+  color: white;
+}
+.banner ul{
+  bottom:0px;
+}
+.navItem{
+  float: left;
+  display: block;
+  padding: 0.5em;
+  color: white;
+  border-bottom: 1px solid #666;
+}
+.selected{
+  border-bottom: 1px solid white;
+}
+.navItem:hover{
+  border-bottom: 1px solid white;
+}
+h4,
+p,
+a,
+a:hover{
+  color: #444;
+  text-decoration: none;
+}
+ul.pagination > li > a:focus,
+ul.pagination > li > a:hover,
+ul.pagination > li > span:focus,
+ul.pagination > li > span:hover {
+  z-index: 3;
+  color: #666;
+  background-color: #ccc;
+  border-color: #ccc;
+}
+ul.pagination > li.page-item.disabled > a,
+ul.pagination > li > a,
+ul.pagination > li > span {
+  z-index: 3;
+  color: #999;
+  background-color: #343a40;
+  border-color: #343a40;
+}
+ul.pagination > li.page-item.active > a,
+ul.pagination > li.page-item.active > span {
+  z-index: 3;
+  color: #AAA;
+  background-color: #555;
+  border-color: #555;
+}

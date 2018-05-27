@@ -1,0 +1,32 @@
+<canvas id="gc" width="640" height="640"></canvas>
+<script>
+	window.onload = function() {
+		canvas = document.getElementById("gc");
+		context = canvas.getContext("2d");
+		setInterval(game, 1000/30);
+		GridW = GridH = 32;
+		nodegrid = [];
+		for (var i=0;i<(canvas.width/GridW);i++){
+			for (var j=0;j<(canvas.height/GridH);j++){
+				nodegrid[i*GridW][j*GridH] = new node(i*GridW,j*GridH,"open");
+			}
+		}
+	}
+
+
+
+	function game() {
+		context.fillStyle = "black";
+		context.fillRect(0,0,canvas.width,canvas.height);
+	}
+
+	function node(x,y,type) {
+		this.x = x;
+		this.y = y;
+		this.h = 9999;
+		this.g = 9999;
+		this.cost = this.h + this.g;
+		this.type = type;
+		this.parent = -1;
+	}
+</script>
