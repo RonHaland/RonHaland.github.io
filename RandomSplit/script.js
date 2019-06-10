@@ -55,4 +55,10 @@ function subSplit(list, groups) {
 
 window.onload = function() {
     //var content = document.getElementById('string')
+    var ind = 0;
+    setInterval( () => {
+
+        //document.getElementById('cubeTemplate').setAttribute('style','transform: rotateY('+(ind)+'deg)')
+        ind+=30;
+    }, 1000);
 }
